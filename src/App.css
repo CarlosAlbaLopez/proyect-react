@@ -7,6 +7,56 @@
   pointer-events: none;
 }
 
+.ChatRoom {
+  background-color: grey;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.ChatRoomHeader {
+  background-color: yellowgreen;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.Message {
+  background-color: yellow;
+  display: flex;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 30;
+}
+
+.MessageBody {
+  background-color: yellowgreen;
+  border: none;
+  margin-left: 10px;
+  padding: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 100%;
+}
+
+.Avatar {
+  background-color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 5;
+  padding: 10;
+  border: 1px dotted black;
+  border-radius: 30;
+}
+
+.Avatar img {
+  max-width: 80px;
+  align-self: center;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
