@@ -10,7 +10,6 @@
 .ChatRoom {
   background-color: grey;
   text-align: center;
-  padding: 10px;
   border: 1px solid black;
 }
 
@@ -21,11 +20,10 @@
   padding: 10px;
 }
 
-.Message {
+.ChatMessage {
   background-color: yellow;
   display: flex;
   text-align: center;
-  margin: 10px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 30;
@@ -34,7 +32,7 @@
 .MessageBody {
   background-color: yellowgreen;
   border: none;
-  margin-left: 10px;
+  margin: 5px;
   padding: 10px;
   text-align: justify;
   text-justify: inter-word;
@@ -46,7 +44,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 5;
+  margin: 5px;
   padding: 10;
   border: 1px dotted black;
   border-radius: 30;
@@ -55,6 +53,27 @@
 .Avatar img {
   max-width: 80px;
   align-self: center;
+}
+
+.ListOfMessages {
+  padding-inline-start: 10px;
+}
+
+.TextArea {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.submit {
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 50.7%;
+}
+
+.Cargar {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
