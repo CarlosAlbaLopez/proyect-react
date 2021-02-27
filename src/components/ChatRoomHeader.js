@@ -1,27 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export class ChatRoomHeader extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-    };
-  }
+export const ChatRoomHeader = () => {
+  const [date, setDate] = useState(new Date());
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
+  useEffect(() => {
+    const interval = setInterval(() => {
       const newDate = new Date();
-      this.setState({ date: newDate });
+      setDate(newDate);
     }, 1000);
-  }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
-  render() {
-    return (
-      <div className="ChatRoomHeader">{this.state.date.toLocaleString()}</div>
-    );
-  }
-}
+  return <div className="ChatRoomHeader">{date.toLocaleString()}</div>;
+};
+
+// export class ChatRoomHeader extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       date: new Date(),
+//     };
+//   }
+
+//   componentDidMount() {
+//     this.interval = setInterval(() => {
+//       const newDate = new Date();
+//       this.setState({ date: newDate });
+//     }, 1000);
+//   }
+
+//   componentWillUnmount() {
+//     clearInterval(this.interval);
+//   }
+
+//   render() {
+//     return (
+//       <div className="ChatRoomHeader">{this.state.date.toLocaleString()}</div>
+//     );
+//   }
+// }
